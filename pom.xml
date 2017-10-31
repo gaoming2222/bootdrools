@@ -65,7 +65,7 @@
 			<version>2.6</version>
 		</dependency>
 
-		<!-- die -->
+		<!-- drools相关jar文件 -->
 		<dependency>
 			<groupId>org.kie</groupId>
 			<artifactId>kie-api</artifactId>
@@ -91,15 +91,33 @@
 			<artifactId>drools-templates</artifactId>
 			<version>${drools.version}</version>
 		</dependency>
+		
+		<!-- 用于drools的远程连接 -->
 		<dependency>
 			<groupId>org.kie</groupId>
 			<artifactId>kie-ci</artifactId>
 			<version>${drools.version}</version>
 		</dependency>
+		<!-- 用于drools图表的转换 -->
 		<dependency>
 			<groupId>org.drools</groupId>
 			<artifactId>drools-workbench-models-guided-dtable</artifactId>
 			<version>${drools.version}</version>
+		</dependency>
+		<!--  thymeleaf 用于由controller映射到html文件，需在配置文件中加一句话 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.9</version>
+		</dependency>
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.1.0</version>
 		</dependency>
 	</dependencies>
 	<!-- jar -->

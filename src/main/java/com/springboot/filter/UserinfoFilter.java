@@ -2,6 +2,7 @@ package com.springboot.filter;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 import org.drools.compiler.kproject.ReleaseIdImpl;
 import org.drools.core.io.impl.UrlResource;
@@ -18,7 +19,7 @@ import com.springboot.entity.*;;
 public class UserinfoFilter {
 	
 	public List<Userinfo> getFilterUserinfo(List<Userinfo> input) throws IOException{
-		List<Userinfo> result = null;
+		List<Userinfo> result = new ArrayList<Userinfo>();
 		String url = "http://127.0.0.1:8080/kie-drools-wb/maven2/com/myteam/gm4/1.0.0/gm4-1.0.0.jar";
 		ReleaseIdImpl releaseId = null;
 		releaseId = new ReleaseIdImpl("com.myteam", "gm4", "LATEST");
